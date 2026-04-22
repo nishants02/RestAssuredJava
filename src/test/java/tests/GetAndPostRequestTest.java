@@ -4,14 +4,10 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class GetAndPostRequest {
+public class GetAndPostRequestTest {
 
     @Test
     public void testGET(){
@@ -34,9 +30,9 @@ public class GetAndPostRequest {
     @Test
     public void testPOST(){
 
+        /*
         Map<String, Object> map = new HashMap<String, Object>();
 
-       /*
         map.put("username", "NPS");
         map.put("password", "NewPass");
 
@@ -48,12 +44,12 @@ public class GetAndPostRequest {
         request.put("username", "NPS");
         request.put("password", "NewPass");
 
-        System.out.println(request.toString());
+//        System.out.println(request.toString());
 
         baseURI = "https://json-placeholder.mock.beeceptor.com";
 
         given().
-                header("Content-Type", "apploication/json").
+                header("Content-Type", "application/json").
                 contentType(ContentType.JSON). //Content sending is of type JSON
                 accept(ContentType.JSON). //Response accepted will be of type JSON
                 body(request.toString()).
